@@ -1,4 +1,4 @@
-"""pytorchexample: A Flower / PyTorch app."""
+"""fl_healthcare: A Flower / PyTorch app."""
 
 import torch
 from torch.utils.tensorboard import SummaryWriter
@@ -6,7 +6,7 @@ from flwr.app import ArrayRecord, ConfigRecord, Context, MetricRecord
 from flwr.serverapp import Grid, ServerApp
 from flwr.serverapp.strategy import FedYogi
 
-from pytorchexample.task import TabularMLP, load_centralized_dataset, test
+from task import TabularMLP, load_centralized_dataset, test
 
 # Create ServerApp
 app = ServerApp()

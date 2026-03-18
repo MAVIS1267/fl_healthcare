@@ -54,7 +54,7 @@ class DengueDataset(Dataset):
         return self.features[idx], self.labels[idx]
 
 def load_data(partition_id: int, num_partitions: int, batch_size: int):
-    data_dir = "../dengue-generalizability/data"
+    data_dir = "data"
     df = load_all_processed_data(data_dir)
     
     datasets = ["Dataset 1", "Dataset 2", "Dataset 3", "Dataset 4", "Dataset 5"]
@@ -74,7 +74,7 @@ def load_data(partition_id: int, num_partitions: int, batch_size: int):
 
 def load_centralized_dataset():
     """Load entire valid dataset as the centralized evaluation set."""
-    data_dir = "/home/fuduweiii/IT/Project/dengue-generalizability/data"
+    data_dir = "data"
     df = load_all_processed_data(data_dir)
     return DataLoader(DengueDataset(df), batch_size=128)
 

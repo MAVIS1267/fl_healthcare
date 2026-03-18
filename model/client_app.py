@@ -1,13 +1,13 @@
-"""pytorchexample: A Flower / PyTorch app."""
+"""fl_healthcare: A Flower / PyTorch app."""
 
 import torch
 from torch.utils.tensorboard import SummaryWriter
 from flwr.app import ArrayRecord, Context, Message, MetricRecord, RecordDict
 from flwr.clientapp import ClientApp
 
-from pytorchexample.task import TabularMLP, load_data
-from pytorchexample.task import test as test_fn
-from pytorchexample.task import train as train_fn
+from task import TabularMLP, load_data
+from task import test as test_fn
+from task import train as train_fn
 
 # Flower ClientApp
 app = ClientApp()
